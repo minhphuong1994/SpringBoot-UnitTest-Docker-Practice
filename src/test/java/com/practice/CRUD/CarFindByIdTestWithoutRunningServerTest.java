@@ -13,7 +13,6 @@ import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import static org.hamcrest.Matchers.containsString;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Assertions;
 
@@ -53,7 +52,7 @@ public class CarFindByIdTestWithoutRunningServerTest {
 
         assertNotNull(resCar);
 
-        //assert the responsed Car obj has the same value as the one added
+        //assert the responded Car obj has the same value as the one added
         Assertions.assertEquals(resCar.compareTo(carAdded),0);
     }
 }

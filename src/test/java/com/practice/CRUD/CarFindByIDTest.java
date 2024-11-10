@@ -2,7 +2,6 @@ package com.practice.CRUD;
 
 import com.practice.CRUD.model.Car;
 import com.practice.CRUD.model.Color;
-import com.practice.CRUD.repository.CarRepository;
 import com.practice.CRUD.service.CarService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
