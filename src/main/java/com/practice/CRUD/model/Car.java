@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "car_details")
-public class Car{
+public class Car implements Comparable<Car>{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -49,4 +49,33 @@ public class Car{
     public void setYear(int year) {
         this.year = year;
     }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "id=" + id +
+                ", color=" + color +
+                ", model='" + model + '\'' +
+                ", make='" + make + '\'' +
+                ", year=" + year +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Car o) {
+        if(this.make.compareTo(o.getMake()) !=0){
+            return this.make.compareTo(o.getMake());
+        }
+        else if(this.model.compareTo(o.getModel()) != 0){
+            return this.model.compareTo(o.getModel());
+        }
+        else if(this.getYear() - o.getYear() != 0){
+            return this.getYear() - o.getYear();
+        }
+        else if(this.color.compareTo(o.getColor()) !=0){
+            return this.color.compareTo(o.getColor());
+        }
+        return 0;
+    }
+
 }
