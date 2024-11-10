@@ -52,7 +52,7 @@ public class Car implements Comparable<Car>{
 
     @Override
     public String toString() {
-        return "Car{" +
+        return "{" +
                 "id=" + id +
                 ", color=" + color +
                 ", model='" + model + '\'' +
